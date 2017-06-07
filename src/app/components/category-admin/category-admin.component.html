@@ -1,0 +1,12 @@
+<h1> {{title}} </h1>
+<div class="formgroup">
+  <label for="categoryId">Category Id</label>
+  <input (change)='onIdChange($event)' type="text" id="categoryId">
+</div>
+<div class="formgroup">
+  <label for="categoryName">Category Name</label>
+  <input (change)='onNameChange($event)' type="text" id="categoryName">
+</div>
+<div class="formgroup">
+  <input (click)='onAddCategory()' type="submit" value="ADD">
+</div>

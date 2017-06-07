@@ -1,0 +1,26 @@
+<h1> {{title}} </h1>
+<div class="formgroup">
+  <label for="txtId">Book Id</label>
+  <input (change)='onIdChange($event)' type="text" id="txtId">
+</div>
+<div class="formgroup">
+  <label for="txtName">Book Name</label>
+  <input (change)='onNameChange($event)' type="text" id="txtName">
+</div>
+<div class="formgroup">
+  <label for="txtAuthor">Author</label>
+  <input (change)='onAuthorChange($event)' type="text" id="txtAuthor">
+</div>
+<div class="formgroup">
+  <label for="sltCategory">Book Category</label>
+  <select id="sltCategory" (change)='onCategoryChange($event)'>
+    <option *ngFor='let category of categories' [value]='category.getName()'>{{category.getName()}}</option>
+  </select>
+</div>
+<div class="formgroup">
+  <label for="txtPrice">Price</label>
+  <input (change)='onPriceChange($event)' type="text" id="txtPrice">
+</div>
+<div class="formgroup">
+  <input (click)='onAdd()' type="submit" value="ADD">
+</div>
